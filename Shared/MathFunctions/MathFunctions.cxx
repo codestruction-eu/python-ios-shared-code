@@ -1,7 +1,5 @@
-
 #include "MathFunctions.h"
-
-#include <cmath>
+#include <math.h>
 
 #ifdef USE_MYMATH
 #  include "mysqrt.h"
@@ -13,7 +11,7 @@ double sqrt(double x)
 #ifdef USE_MYMATH
   return detail::mysqrt(x);
 #else
-  return std::sqrt(x);
+  return sqrt(x);
 #endif
 }
 }
