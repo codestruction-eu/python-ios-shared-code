@@ -4,7 +4,7 @@
 #export CC=/usr/bin/clang
 #export CXX=/usr/bin/clang++
 
-BUILD_DIR=build-linux
+BUILD_DIR=build
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 cmake -G "Unix Makefiles" ../
