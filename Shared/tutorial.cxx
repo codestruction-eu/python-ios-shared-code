@@ -1,7 +1,5 @@
 // A simple program that computes the square root of a number
-#include <iostream>
-#include <string>
-
+#include <stdio.h>
 #include "MathFunctions.h"
 #include "TutorialConfig.h"
 
@@ -9,9 +7,8 @@ int main(int argc, char* argv[])
 {
   if (argc < 2) {
     // report version
-    std::cout << argv[0] << " Version " << Tutorial_VERSION_MAJOR << "."
-              << Tutorial_VERSION_MINOR << std::endl;
-    std::cout << "Usage: " << argv[0] << " number" << std::endl;
+    printf("%s Version %d.%d\n", argv[0], Tutorial_VERSION_MAJOR, Tutorial_VERSION_MINOR);
+    printf("Usage: %s number\n", argv[0]);
     return 1;
   }
 
@@ -20,7 +17,6 @@ int main(int argc, char* argv[])
 
   const double outputValue = mathfunctions::sqrt(inputValue);
 
-  std::cout << "The square root of " << inputValue << " is " << outputValue
-            << std::endl;
+  printf("The square root of %.0f is %.0f\n", inputValue, outputValue);
   return 0;
 }

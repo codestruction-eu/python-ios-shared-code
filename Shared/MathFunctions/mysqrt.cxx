@@ -11,14 +11,8 @@ double mysqrt(double x)
     return 0;
   }
 
-  // use the table to help find an initial value
-  double result = x;
-  if (x >= 1 && x < 10) {
-    std::cout << "Use the table to help find an initial value " << std::endl;
-    result = -1;
-  }
-
   // do ten iterations
+  double result = x;
   for (int i = 0; i < 10; ++i) {
     if (result <= 0) {
       result = 0.1;
