@@ -5,13 +5,11 @@
 #  include "mysqrt.h"
 #endif
 
-namespace mathfunctions {
-double sqrt(double x)
+double mathfunctions_sqrt(double x)
 {
 #ifdef USE_MYMATH
   return detail::mysqrt(x);
 #else
   return sqrt(x);
 #endif
-}
 }

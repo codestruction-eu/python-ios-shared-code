@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
   // convert input to double
   const double inputValue = strtod(argv[1], NULL);
 
-  const double outputValue = mathfunctions::sqrt(inputValue);
+  const double outputValue = mathfunctions_sqrt(inputValue);
 
   printf("The square root of %.0f is %.0f\n", inputValue, outputValue);
   return 0;

@@ -9,6 +9,4 @@
 #  define DECLSPEC
 #endif
 
-namespace mathfunctions {
-double DECLSPEC sqrt(double x);
-}
+double DECLSPEC mathfunctions_sqrt(double x);
