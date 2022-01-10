@@ -8,7 +8,7 @@
 double mathfunctions_sqrt(double x)
 {
 #ifdef USE_MYMATH
-  return detail::mysqrt(x);
+  return mysqrt(x);
 #else
   return sqrt(x);
 #endif
