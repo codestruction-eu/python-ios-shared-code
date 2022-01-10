@@ -43,13 +43,3 @@ target_compile_definitions(MathFunctions PRIVATE "EXPORTING_MYMATH")
 # setup the version numbering
 set_property(TARGET MathFunctions PROPERTY VERSION "1.0.0")
 set_property(TARGET MathFunctions PROPERTY SOVERSION "1")
-
-# install rules
-set(installable_libs MathFunctions tutorial_compiler_flags)
-if(TARGET SqrtLibrary)
-  list(APPEND installable_libs SqrtLibrary)
-endif()
-install(TARGETS ${installable_libs}
-        EXPORT MathFunctionsTargets
-        DESTINATION lib)
-install(FILES MathFunctions.h DESTINATION include)
