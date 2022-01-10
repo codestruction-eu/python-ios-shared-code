@@ -9,30 +9,23 @@ target_include_directories(MathFunctions
                             $<INSTALL_INTERFACE:include>
                            )
 
-# should we use our own math functions
-option(USE_MYMATH "Use tutorial provided math implementation" ON)
-if(USE_MYMATH)
+# library that just does sqrt
+add_library(SqrtLibrary STATIC
+            mysqrt.cxx
+            )
 
-  target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
+# state that we depend on our binary dir to find Table.h
+target_include_directories(SqrtLibrary PRIVATE
+                           ${CMAKE_CURRENT_BINARY_DIR}
+                           )
 
-  # library that just does sqrt
-  add_library(SqrtLibrary STATIC
-              mysqrt.cxx
-              )
+# state that SqrtLibrary need PIC when the default is shared libraries
+set_target_properties(SqrtLibrary PROPERTIES
+                      POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS}
+                      )
 
-  # state that we depend on our binary dir to find Table.h
-  target_include_directories(SqrtLibrary PRIVATE
-                             ${CMAKE_CURRENT_BINARY_DIR}
-                             )
-
-  # state that SqrtLibrary need PIC when the default is shared libraries
-  set_target_properties(SqrtLibrary PROPERTIES
-                        POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS}
-                        )
-
-  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
-  target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
-endif()
+target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
+target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 
 target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
 
