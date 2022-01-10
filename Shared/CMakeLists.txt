@@ -3,8 +3,6 @@ cmake_minimum_required(VERSION 3.15)
 # set the project name and version
 project(Tutorial VERSION 1.0)
 
-set(CMAKE_DEBUG_POSTFIX d)
-
 add_library(tutorial_compiler_flags INTERFACE)
 target_compile_features(tutorial_compiler_flags INTERFACE c_std_11)
 
@@ -39,8 +37,6 @@ add_subdirectory(MathFunctions)
 
 # add the executable
 add_executable(Tutorial tutorial.c)
-set_target_properties(Tutorial PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
-
 target_link_libraries(Tutorial PUBLIC MathFunctions)
 
 # add the binary tree to the search path for include files
