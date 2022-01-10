@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include <stdio.h>
 #include "MathFunctions.h"
 
 namespace detail {
@@ -18,7 +17,7 @@ double mysqrt(double x)
     }
     double delta = x - (result * result);
     result = result + 0.5 * delta / result;
-    std::cout << "Computing sqrt of " << x << " to be " << result << std::endl;
+    printf("Computing sqrt of %f to be %f\n", x, result);
   }
 
   return result;
