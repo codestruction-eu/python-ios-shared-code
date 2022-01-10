@@ -38,7 +38,7 @@ configure_file(TutorialConfig.h.in TutorialConfig.h)
 add_subdirectory(MathFunctions)
 
 # add the executable
-add_executable(Tutorial tutorial.cxx)
+add_executable(Tutorial tutorial.c)
 set_target_properties(Tutorial PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 
 target_link_libraries(Tutorial PUBLIC MathFunctions)

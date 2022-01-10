@@ -1,5 +1,5 @@
 # add the library that runs
-add_library(MathFunctions MathFunctions.cxx)
+add_library(MathFunctions MathFunctions.c)
 
 # state that anybody linking to us needs to include the current source dir
 # to find MathFunctions.h, while we don't.
@@ -11,7 +11,7 @@ target_include_directories(MathFunctions
 
 # library that just does sqrt
 add_library(SqrtLibrary STATIC
-            mysqrt.cxx
+            mysqrt.c
             )
 
 # state that we depend on our binary dir to find Table.h
