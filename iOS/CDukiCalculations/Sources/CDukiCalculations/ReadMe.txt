@@ -1,0 +1,1 @@
+clang -arch x86_64 -mios-version-min=9.0 -isysroot `xcode-select -p`/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk dukicalculations.c -c && ar rcs libdukicalculations.a dukicalculations.o && rm dukicalculations.o
