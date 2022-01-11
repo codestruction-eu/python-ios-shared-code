@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import Shared
 
 @main
 struct DukiAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    print(Shared().text)
+                }
         }
     }
 }

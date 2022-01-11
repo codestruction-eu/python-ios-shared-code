@@ -11,6 +11,7 @@
 		59B7C042278D5A9700F1D070 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C041278D5A9700F1D070 /* ContentView.swift */; };
 		59B7C044278D5A9900F1D070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B7C043278D5A9900F1D070 /* Assets.xcassets */; };
 		59B7C047278D5A9900F1D070 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B7C046278D5A9900F1D070 /* Preview Assets.xcassets */; };
+		59B7C04F278D5C9600F1D070 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7C04E278D5C9600F1D070 /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B7C04F278D5C9600F1D070 /* Shared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +39,7 @@
 			children = (
 				59B7C03E278D5A9700F1D070 /* DukiApp */,
 				59B7C03D278D5A9700F1D070 /* Products */,
+				59B7C04D278D5C9600F1D070 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +70,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		59B7C04D278D5C9600F1D070 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = DukiApp;
+			packageProductDependencies = (
+				59B7C04E278D5C9600F1D070 /* Shared */,
+			);
 			productName = DukiApp;
 			productReference = 59B7C03C278D5A9700F1D070 /* DukiApp.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +287,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +316,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +354,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59B7C04E278D5C9600F1D070 /* Shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59B7C034278D5A9700F1D070 /* Project object */;
 }
