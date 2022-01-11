@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-import Shared
+import CDukiCalculations
+import dukicalculations
 
 @main
 struct DukiAppApp: App {
@@ -14,7 +15,8 @@ struct DukiAppApp: App {
         WindowGroup {
             ContentView()
                 .onAppear {
-                    print(Shared().text)
+//                    print(Shared().text)
+                    something()
                 }
         }
     }

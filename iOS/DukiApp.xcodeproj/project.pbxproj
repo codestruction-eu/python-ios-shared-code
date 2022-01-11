@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593E4D4C278DB34C00B23FFC /* CDukiCalculations in Frameworks */ = {isa = PBXBuildFile; productRef = 593E4D4B278DB34C00B23FFC /* CDukiCalculations */; };
 		59B7C040278D5A9700F1D070 /* DukiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C03F278D5A9700F1D070 /* DukiAppApp.swift */; };
 		59B7C042278D5A9700F1D070 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C041278D5A9700F1D070 /* ContentView.swift */; };
 		59B7C044278D5A9900F1D070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B7C043278D5A9900F1D070 /* Assets.xcassets */; };
 		59B7C047278D5A9900F1D070 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B7C046278D5A9900F1D070 /* Preview Assets.xcassets */; };
-		59B7C04F278D5C9600F1D070 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 59B7C04E278D5C9600F1D070 /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59B7C04F278D5C9600F1D070 /* Shared in Frameworks */,
+				593E4D4C278DB34C00B23FFC /* CDukiCalculations in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = DukiApp;
 			packageProductDependencies = (
-				59B7C04E278D5C9600F1D070 /* Shared */,
+				593E4D4B278DB34C00B23FFC /* CDukiCalculations */,
 			);
 			productName = DukiApp;
 			productReference = 59B7C03C278D5A9700F1D070 /* DukiApp.app */;
@@ -356,9 +356,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		59B7C04E278D5C9600F1D070 /* Shared */ = {
+		593E4D4B278DB34C00B23FFC /* CDukiCalculations */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Shared;
+			productName = CDukiCalculations;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

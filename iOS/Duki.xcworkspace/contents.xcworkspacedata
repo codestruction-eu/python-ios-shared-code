@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Shared">
+      location = "group:DukiApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:DukiApp.xcodeproj">
+      location = "group:CDukiCalculations">
    </FileRef>
 </Workspace>
