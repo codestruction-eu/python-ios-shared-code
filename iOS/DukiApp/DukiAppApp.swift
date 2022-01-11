@@ -7,7 +7,6 @@
 
 import SwiftUI
 import CDukiCalculations
-import dukicalculations
 
 @main
 struct DukiAppApp: App {
@@ -15,8 +14,11 @@ struct DukiAppApp: App {
         WindowGroup {
             ContentView()
                 .onAppear {
-//                    print(Shared().text)
-                    something()
+                    var array: [Int64] = [9, 8, 7, 6]
+                    let str = demo(true, 10, 1.23, &array, array.count).map {
+                        String(cString: $0)
+                    }
+                    print("String from library: \(str ?? "<NULL>")")
                 }
         }
     }
