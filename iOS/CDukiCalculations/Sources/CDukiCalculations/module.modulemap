@@ -1,0 +1,5 @@
+module CDukiCalculations {
+    header "../../../../Shared/dukicalculations.h"
+    link "dukicalculations"
+    export *
+}
