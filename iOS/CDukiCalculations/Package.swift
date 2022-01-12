@@ -11,9 +11,10 @@ let package = Package(
             targets: ["CDukiCalculations"]),
     ],
     targets: [
-        .systemLibrary(name: "CDukiCalculations", pkgConfig: "./pkgConfig.pc"),
+        .systemLibrary(name: "CDukiCalculations"),
         .testTarget(
             name: "CDukiCalculationsTests",
-            dependencies: ["CDukiCalculations"]),
+            dependencies: ["CDukiCalculations"],
+            linkerSettings: [.unsafeFlags(["-L/Users/christoph/Documents/Codestruction-tmp/python-ios-shared-code/Shared/build-mac/Release"])]),
     ]
 )

@@ -8,7 +8,6 @@
 
 * Xcode
 * [cmake](https://cmake.org/download/#latest)
-* [pkg-config](https://noknow.info/it/os/install_pkg_config_from_source?lang=en)
 
 Ensure `cmake` can be found, e.g.:
 

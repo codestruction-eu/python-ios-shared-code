@@ -1,8 +1,0 @@
-libdir=../../Shared/build-mac/Release
-includedir=../../Shared/build-mac
-
-Name: dukicalculations
-Description: Appears in a Stack Overflow answer.
-Version: 1.0.0
-Libs: -L${libdir}
-Cflags: -I${includedir}
