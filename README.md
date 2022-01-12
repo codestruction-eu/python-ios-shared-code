@@ -21,8 +21,8 @@ PATH="/install/dir/of/CMake.app/Contents/bin":"$PATH"
 ( \
     mkdir -p Shared/build-mac && \
     cd Shared/build-mac && \
-    cmake .. && \
-    cmake --build .
+    cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../ios.toolchain.cmake -DPLATFORM=OS64COMBINED -DDEPLOYMENT_TARGET=9.0 -DENABLE_STRICT_TRY_COMPILE=1 -DENABLE_VISIBILITY=0 && \
+    cmake --build . --config Release
 ) && \
 
 ```
