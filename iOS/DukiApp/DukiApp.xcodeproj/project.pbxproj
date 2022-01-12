@@ -11,7 +11,7 @@
 		597B73EF278EED8400948011 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597B73EE278EED8400948011 /* ContentView.swift */; };
 		597B73F1278EED8500948011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597B73F0278EED8500948011 /* Assets.xcassets */; };
 		597B73F4278EED8500948011 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597B73F3278EED8500948011 /* Preview Assets.xcassets */; };
-		597B73FC278EEE4100948011 /* libdukicalculations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 597B73FB278EEDA900948011 /* libdukicalculations.a */; };
+		597B7403278EF85100948011 /* libdukicalculations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 597B7402278EF84100948011 /* libdukicalculations.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		597B73EE278EED8400948011 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		597B73F0278EED8500948011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		597B73F3278EED8500948011 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		597B73FB278EEDA900948011 /* libdukicalculations.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdukicalculations.a; path = "../../Shared/build-mac/Release/libdukicalculations.a"; sourceTree = "<group>"; };
 		597B73FD278EEF3200948011 /* DukiApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DukiApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		597B7402278EF84100948011 /* libdukicalculations.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdukicalculations.a; path = "../../Shared/build-mac/libdukicalculations.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				597B73FC278EEE4100948011 /* libdukicalculations.a in Frameworks */,
+				597B7403278EF85100948011 /* libdukicalculations.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +41,7 @@
 			children = (
 				597B73EB278EED8400948011 /* DukiApp */,
 				597B73EA278EED8400948011 /* Products */,
-				597B73FA278EEDA900948011 /* Frameworks */,
+				597B7401278EF84100948011 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,10 +73,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		597B73FA278EEDA900948011 /* Frameworks */ = {
+		597B7401278EF84100948011 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				597B73FB278EEDA900948011 /* libdukicalculations.a */,
+				597B7402278EF84100948011 /* libdukicalculations.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/../../Shared/build-mac/Release";
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/../../Shared/build-mac";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +274,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/../../Shared/build-mac/Release";
+				LIBRARY_SEARCH_PATHS = "${PROJECT_DIR}/../../Shared/build-mac";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
