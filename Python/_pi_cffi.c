@@ -567,7 +567,7 @@ static void (*_cffi_call_python_org)(struct _cffi_externpy_s *, char *);
 /************************************************************/
 
 
-    #include "pi.h"
+     #include "shared.h"   // the C header of the library
 
 
 /************************************************************/
@@ -635,7 +635,7 @@ static const struct _cffi_type_context_s _cffi_type_context = {
 
 #ifdef PYPY_VERSION
 PyMODINIT_FUNC
-_cffi_pypyinit__pi(const void *p[])
+_cffi_pypyinit__pi_cffi(const void *p[])
 {
     p[0] = (const void *)0x2601;
     p[1] = &_cffi_type_context;
@@ -646,22 +646,22 @@ _cffi_pypyinit__pi(const void *p[])
 #  ifdef _MSC_VER
      PyMODINIT_FUNC
 #  if PY_MAJOR_VERSION >= 3
-     PyInit__pi(void) { return NULL; }
+     PyInit__pi_cffi(void) { return NULL; }
 #  else
-     init_pi(void) { }
+     init_pi_cffi(void) { }
 #  endif
 #  endif
 #elif PY_MAJOR_VERSION >= 3
 PyMODINIT_FUNC
-PyInit__pi(void)
+PyInit__pi_cffi(void)
 {
-  return _cffi_init("_pi", 0x2601, &_cffi_type_context);
+  return _cffi_init("_pi_cffi", 0x2601, &_cffi_type_context);
 }
 #else
 PyMODINIT_FUNC
-init_pi(void)
+init_pi_cffi(void)
 {
-  _cffi_init("_pi", 0x2601, &_cffi_type_context);
+  _cffi_init("_pi_cffi", 0x2601, &_cffi_type_context);
 }
 #endif
 
