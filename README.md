@@ -2,6 +2,58 @@
 
 ## Instructions for Windows
 
+### Requirements
+
+* Visual Studio Community Edition 2022
+* cmake
+* Python3
+
+### Build the library
+
+```
+mkdir Shared\build-win
+cd Shared\build-win
+cmake ..
+cmake --build . --target ALL_BUILD --config Release
+```
+
+### Prepare the binding
+
+https://cffi.readthedocs.io/en/latest/overview.html#api-mode-calling-c-sources-instead-of-a-compiled-library
+
+* Open Developer Powershell with -DevCmdArguments '-arch=x64' https://developercommunity.visualstudio.com/t/x64-developer-powershell-for-vs-2019/943058
+
+```
+C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -noe -c "&{Import-Module """C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"""; Enter-VsDevShell a6de82ea -DevCmdArguments '-arch=x64'}"
+```
+
+* Enter Python venv
+
+```
+cd Python
+& 'C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\python.exe' -m venv .
+Set-ExecutionPolicy RemoteSigned -Scope Process
+.\Scripts\Activate.ps1
+```
+
+* Restore pip packages
+
+```
+pip install -r .\requirements.txt
+```
+
+* Compile the interface
+
+```
+python.exe .\piapprox_build.py
+```
+
+### Run Python code
+
+```
+python run.py
+```
+
 ## Instructions for macOS
 
 ### Requirements
