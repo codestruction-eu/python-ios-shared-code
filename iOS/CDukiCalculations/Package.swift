@@ -15,6 +15,6 @@ let package = Package(
         .testTarget(
             name: "CDukiCalculationsTests",
             dependencies: ["CDukiCalculations"],
-            linkerSettings: [.unsafeFlags(["-L./Sources/CDukiCalculations"])]),
+            linkerSettings: [.unsafeFlags(["-L/Users/christoph/Documents/Codestruction-tmp/python-ios-shared-code/Shared/build-mac/Release"])]),
     ]
 )

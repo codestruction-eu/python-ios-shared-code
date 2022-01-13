@@ -1,7 +1,8 @@
-#include "shared.h"
+#include "dukicalculations.h"
+
 #include <stdio.h>
-# include <stdlib.h>
-# include <math.h>
+#include <stdlib.h>
+#include <math.h>
 
 /* Returns a very crude approximation of Pi
    given a int: a number of iteration */
@@ -18,8 +19,4 @@ float pi_approx(int n){
       sum++; }
 
   return 4*(float)sum/(float)n;
-}
-
-void f() {
-  printf("f()\n");
 }

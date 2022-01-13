@@ -13,10 +13,11 @@ ffibuilder.cdef("""
 # so it is often just the "#include".
 ffibuilder.set_source("_pi_cffi",
 """
-     #include "../shared.h"   // the C header of the library
+     #include "../Shared/dukicalculations.h"   // the C header of the library
 """,
-     libraries=['shared'],   # library name, for the linker
-     extra_link_args=['-L/Users/christoph/Documents/Codestruction-tmp/python-ios-shared-code/Shared/build'])
+     libraries=['dukicalculations'],   # library name, for the linker
+     extra_compile_args=['-I../Shared/build-win'],
+     extra_link_args=['/LIBPATH:../Shared/build-win/Release'])
 
 if __name__ == "__main__":
     ffibuilder.compile(verbose=True)
